@@ -20,15 +20,29 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
 " status bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
+
 "tree
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
+" typing
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
 
+" tmux
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
 
+" autocomplete
+Plug 'sirver/ultisnips'
+
+" IDE
+Plug 'easymotion/vim-easymotion'
 lua << EOF
 require('telescope').setup{
   defaults = {
